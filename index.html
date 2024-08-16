@@ -9,42 +9,48 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-    <h1>ADMISSION FORM</h1>
-    <form name="RegForm" onsubmit="return validateForm()">
+<body><div class="container py-5">
+    <div class= "row justify-content-center">
+    <div class="col-lg-6 border p-4 shadow bg-light">
+      <form method="post" onsubmit="return validate()">
+          <h1>Registration Form</h1>
+            <hr class="mb-6">
+
+    <!-- <h1>ADMISSION FORM</h1>
+    <form name="RegForm" onsubmit="return validateForm()"> -->
         <div class="name">
-         <label for="name">Name:</label>
-            <input type="text" id="name" name="Name" 
-                placeholder="Enter your full name" />
-            <span id="name" class="text-danger font-weight-bold"></span>
+         <label for="name">Username:</label>
+            <input type="text" id="user" name="Name" 
+                placeholder="Enter Username" />
+            <span id="uname" class="text-danger font-weight-bold"></span>
         </div>
         <div class="address">
             <label for="address">Address:</label>
             <input type="text" id="address" name="Address" 
                 placeholder="Enter your address" />
-            <span id="address" class="text-danger font-weight-bold"></span>
+            <span id="adrs" class="text-danger font-weight-bold"></span>
         </div>
         <div class="email">
             <label for="email">E-mail Address:</label>
             <input type="text" id="email" name="EMail" 
                 placeholder="Enter your email" />
-            <span id="email" class="text-danger font-weight-bold"></span>
+            <span id="mail" class="text-danger font-weight-bold"></span>
         </div>
         <div class="mobile">
             <label for="mobile no.">mobile no.:</label>
-            <input type="text" id="mobile no." name="mobile no."/>
-            <span id="mobile no." class="text-danger font-weight-bold"></span>
+            <input type="text" id="mobile no." name="mobile no." placeholder="01234"/>
+            <span id="no." class="text-danger font-weight-bold"></span>
     </div>
         <div class="password">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="Password" />
-            <span id="password" class="text-danger font-weight-bold"></span>
+            <input type="password" id="password" name="Password" placeholder="1234" />
+             <span id="pass1" class="text-danger font-weight-bold"></span>
         </div>
         <div class="subject">
             <label for="subject">Select Your Course:</label>
             <select id="subject" name="Subject">
                 <option value="">
-                    Select Course
+                    none
                 </option>
                 <option value="BTECH">
                     BTECH
@@ -63,7 +69,7 @@
         </div>
         <div class="College name">
             <label for="comment">College Name:</label>
-            <textarea id="comment" name="Comment"></textarea>
+            <textarea id="comment" name="Comment" placeholder="enter college name"></textarea>
         </div>
         <div class="checkbox">
             <input type="checkbox" id="agree" name="Agree" />
